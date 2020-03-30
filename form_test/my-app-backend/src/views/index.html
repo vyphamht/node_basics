@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+      src="https://kit.fontawesome.com/99cb46647c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/portfolio/index.html">
+        <h1 class="logo" href="#index">My Portforlio</h1>
+      </a>
+      <nav>
+        <div class="dropdown">
+          <span>Menu</span>
+        
+       
+        <div class="dropdown_content">
+          <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skill">My Skills</a></li>
+            <li><a href="#footer">Contact Me!</a></li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="banner_text">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Temporibus, optio!
+          </p>
+          <input type="button" value="read more" id="btn_readMore" />
+        </div>
+      </section>
+      <section class="intro" id="about">
+        <img src="https://source.unsplash.com/DPWCpOzx8SA/1600x900" alt="me" />
+        <div class="text col-5">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            quas reprehenderit voluptatum. Recusandae consectetur molestiae,
+            quidem dicta dolor omnis placeat, error quaerat vitae nulla,
+            assumenda accusantium corrupti sed. Sequi, cum?
+          </p>
+          <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+          </ul>
+        </div>
+      </section>
+      <section class="skill" id="skill">
+        <div class="intro_skill">
+          <h1>
+            My Skills
+          </h1>
+          <p class="col-12">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero alias
+            porro voluptatibus iure deserunt ab id aliquam magni hic, temporibus
+            doloribus molestias ullam? Vel exercitationem non pariatur sunt
+            molestias quae, quasi alias excepturi porro sapiente, nostrum velit
+            doloribus autem assumenda? Enim repellat architecto nemo vitae, iste
+            alias voluptate debitis ipsa.
+          </p>
+        </div>
+
+        <div class="cart">
+          <div class="boxes">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+            <br />
+            <progress value="80" max="100"></progress>
+          </div>
+          <div class="boxes">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+            <br />
+            <progress value="60" max="100"></progress>
+          </div>
+          <div class="boxes">
+            <i class="fab fa-js"></i>
+            <p>JS</p>
+            <br />
+            <progress value="40" max="100"></progress>
+          </div>
+          <div class="boxes">
+            <i class="fab fa-figma"></i>
+            <p>UI Design</p>
+            <br />
+            <progress value="70" max="100"></progress>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+        <div class="footer">
+          <div class="text1">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+              consequuntur delectus sequi incidunt repellendus consectetur atque
+              ex sit minus eligendi.
+            </p>
+          </div>
+          <div class="text2">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              ipsa iusto ab sit facere quis sunt inventore hic, laudantium
+              exercitationem, velit incidunt voluptatibus facilis error.
+            </p>
+          </div>
+          <div class="contact_form">
+            <h2>Contact Me!</h2>
+            <form role="form" action="/send-email" method="post">
+            <div class="form">
+              <label for="name">Name</label><br />
+              <input type="text" id="name" placeholder="Enter your name" />
+            </div>
+            <div class="form">
+              <label for="email">Email</label><br />
+              <input type="email" id="email" placeholder="Enter your Email" />
+            </div>
+            <div class="form">
+              <label for="phone">Phone Number</label><br />
+              <input
+                type="number"
+                id="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="form">
+              <label for="message">Message</label><br />
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="10"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="140" rows="7" required></textarea>
+            </div>
+            <div class="form">
+              <button name="submit" type="submit" id="send_btn">Send</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section></section>
+    <a id="toTopButton" onclick="topFunction()" ></a>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <script type="text/javascript" src="/portfolio/js/script.js"></script>
+  </body>
+</html>
