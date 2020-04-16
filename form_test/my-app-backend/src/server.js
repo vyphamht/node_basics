@@ -1,8 +1,11 @@
+var PORT = process.env.PORT || 5000;
 var express = require("express");
 (path = require("path")),
   (nodeMailer = require("nodemailer")),
   (bodyParser = require("body-parser"));
 var app = express();
+var http = require("http");
+var server = http.Server(app);
 
 app.use(express.static(__dirname + "/public/"));
 app.get("/", function(req, res) {
@@ -15,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post("/send-email", function(req, res) {
+  console.log(req.body); // nen anh moi bao la console.log req.body ra de xem xem co chuyen gi >_<
   let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -29,7 +33,7 @@ app.post("/send-email", function(req, res) {
     // should be replaced with real recipient's account
     to: "phamhavy171@gmail.com",
     subject: req.body.subject,
-    body: req.body.message
+    text: req.body.message
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -37,11 +41,10 @@ app.post("/send-email", function(req, res) {
     }
     console.log("Message %s sent: %s", info.messageId, info.response);
   });
-  res.writeHead(301, { Location: "index.html" });
+  res.writeHead(301, { Location: "/" });
   res.end();
 });
 
-let server = app.listen(8081, function() {
-  let port = server.address().port;
-  console.log("Server started at http://localhost:%s", port);
+server.listen(PORT, function() {
+  console.log("form running");
 });
